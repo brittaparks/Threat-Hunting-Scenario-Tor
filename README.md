@@ -25,7 +25,7 @@ Management suspects that some employees may be using TOR browsers to bypass netw
 
 ### 1. Searched the `DeviceFileEvents` Table
 
-Searched the DeviceFileEvents table for any string with the word “tor” and discovered what appears to be the user employee having downloaded a tor installer, which resulted in many tor related files being copied to the desktop and the creation of a file called “tor-shopping-list” to the desktop.  These events began at Apr 8, 2025 1:32:23 PM.  The shopping list was created at 2:00:43 PM.  
+Searched the DeviceFileEvents table for any string with the word “tor” and discovered what appears to be the user employee having downloaded a tor installer, which resulted in many tor related files being copied to the desktop and the creation of a file called `tor-shopping-list` to the desktop.  These events began at `Apr 8, 2025 1:32:23 PM`.  The shopping list was created at `2:00:43 PM`.  
 
 **Query used to locate events:**
 
@@ -43,7 +43,7 @@ DeviceFileEvents
 
 ### 2. Searched the `DeviceProcessEvents` Table
 
-Searched the DeviceProcessEvents table for any process command line containing the string “tor-browser-windows-x86_64-portable-14.0.9.exe".  Based on the results returned, at Apr 8, 2025 1:34:59 PM, the employee ran a command to silently install a tor browser.
+Searched the DeviceProcessEvents table for any process command line containing the string `tor-browser-windows-x86_64-portable-14.0.9.exe`.  Based on the results returned, at `Apr 8, 2025 1:34:59 PM`, the employee ran a command to silently install a tor browser.
 
 **Query used to locate event:**
 
@@ -58,7 +58,7 @@ DeviceProcessEvents
 
 ### 3. Searched the `DeviceProcessEvents` Table for TOR Browser Execution
 
-Searched the DeviceProcessEvents table for any indication the user actually opened the tor browser.  There was evidence the employee did open the browser at Apr 8, 2025 1:35:46 PM.  There were several other instances of firefox as well as tor.exe spawned afterwards.
+Searched the DeviceProcessEvents table for any indication the user actually opened the tor browser.  There was evidence the employee did open the browser at `Apr 8, 2025 1:35:46 PM`.  There were several other instances of firefox as well as `tor.exe` spawned afterwards.
 
 **Query used to locate events:**
 
@@ -72,7 +72,7 @@ DeviceProcessEvents
 
 ---
 
-### 4. Searched the `DeviceNetworkEvents` Table for TOR Network ConnectionsSearched the DeviceNetworkEvents table for any indication the Tor browser was used to establish a connection using any of the known Tor ports.  At Apr 8, 2025 1:37:50 PM, an employee on the device successfully established a connection to the Remote IP address 192.121.44.26 on port 9001.  The connection was initiated by the process “tor.exe”, located in the folder “c:\users\cyber\desktop\tor browser\browser\torbrowser\tor\tor.exe”.  There were a few other connections to sites over the Tor browser made around this timeframe.  
+### 4. Searched the `DeviceNetworkEvents` Table for TOR Network ConnectionsSearched the DeviceNetworkEvents table for any indication the Tor browser was used to establish a connection using any of the known Tor ports.  At `Apr 8, 2025 1:37:50 PM`, an employee on the device successfully established a connection to the Remote IP address `192.121.44.26` on port `9001`.  The connection was initiated by the process `tor.exe`, located in the folder `c:\users\cyber\desktop\tor browser\browser\torbrowser\tor\tor.exe`.  There were a few other connections to sites over the Tor browser made around this timeframe.  
 
 **Query used to locate events:**
 
@@ -139,12 +139,12 @@ DeviceNetworkEvents
 
 ## Summary
 
-The user “cyber” on the endpoint device “britt-windows10” initiated and completed the installation of the Tor browser.  They proceeded to launch the browser, establish connections within the Tor network and created various files related to Tor on their desktop including a file named “tor-shopping-list”.  This sequence of activities indicates the user actively installed, configured and used the Tor browser, likely for anonymous browsing purposes with possible documentation in the form of the shopping list document.  
+The user “cyber” on the endpoint device “britt-windows10” initiated and completed the installation of the Tor browser.  They proceeded to launch the browser, establish connections within the Tor network and created various files related to Tor on their desktop including a file named `tor-shopping-list`.  This sequence of activities indicates the user actively installed, configured and used the Tor browser, likely for anonymous browsing purposes with possible documentation in the form of the shopping list document.  
 
 ---
 
 ## Response Taken
 
-TOR usage was confirmed on endpoint “britt-windows10”. The device was isolated and the user's direct manager was notified.
+TOR usage was confirmed on endpoint `britt-windows10`. The device was isolated and the user's direct manager was notified.
 
 ---
