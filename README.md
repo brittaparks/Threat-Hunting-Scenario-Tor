@@ -39,6 +39,10 @@ DeviceFileEvents
 | project Timestamp, DeviceName, ActionType, SHA256, AccountName=InitiatingProcessAccountName, FileName, FolderPath
 ```
 
+
+<img width="1212" alt="image" src="https://github.com/user-attachments/assets/3a42f612-8def-42e6-be25-c3146a707c31">
+
+
 ---
 
 ### 2. Searched the `DeviceProcessEvents` Table
@@ -53,6 +57,9 @@ DeviceProcessEvents
 | where ProcessCommandLine contains "tor-browser-windows-x86_64-portable-14.0.9.exe"
 | project Timestamp, DeviceName, AccountName,ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 ```
+
+<img width="1212" alt="image" src="https://github.com/user-attachments/assets/cfaa93c1-cded-4bd5-968e-752a6fbc0ba8">
+
 
 ---
 
@@ -70,6 +77,9 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName,ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 ```
 
+
+<img width="1212" alt="image" src="https://github.com/user-attachments/assets/c96b3a96-1fd4-4bbb-80ca-95b6bb09bc43">
+
 ---
 
 ### 4. Searched the `DeviceNetworkEvents` Table for TOR Network ConnectionsSearched the DeviceNetworkEvents table for any indication the Tor browser was used to establish a connection using any of the known Tor ports.  At `Apr 8, 2025 1:37:50 PM`, an employee on the device successfully established a connection to the Remote IP address `192.121.44.26` on port `9001`.  The connection was initiated by the process `tor.exe`, located in the folder `c:\users\cyber\desktop\tor browser\browser\torbrowser\tor\tor.exe`.  There were a few other connections to sites over the Tor browser made around this timeframe.  
@@ -84,6 +94,10 @@ DeviceNetworkEvents
 | where RemotePort in ("9001", "9030", "9040", "9050", "9051", "9150", "80", "443")
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName
 ```
+
+
+<img width="1212" alt="image" src="https://github.com/user-attachments/assets/72529b6b-20ea-4eb7-bad1-6a42a4ed0aac">
+
 
 ---
 
