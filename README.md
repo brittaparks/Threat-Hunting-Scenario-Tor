@@ -82,7 +82,9 @@ DeviceProcessEvents
 
 ---
 
-### 4. Searched the `DeviceNetworkEvents` Table for TOR Network ConnectionsSearched the DeviceNetworkEvents table for any indication the Tor browser was used to establish a connection using any of the known Tor ports.  At `Apr 8, 2025 1:37:50 PM`, an employee on the device successfully established a connection to the Remote IP address `192.121.44.26` on port `9001`.  The connection was initiated by the process `tor.exe`, located in the folder `c:\users\cyber\desktop\tor browser\browser\torbrowser\tor\tor.exe`.  There were a few other connections to sites over the Tor browser made around this timeframe.  
+### 4. Searched the 'DeviceNetworkEvents' Table for TOR Network Connections
+
+Searched the DeviceNetworkEvents table for any indication the Tor browser was used to establish a connection using any of the known Tor ports.  At `Apr 8, 2025 1:37:50 PM`, an employee on the device successfully established a connection to the Remote IP address `192.121.44.26` on port `9001`.  The connection was initiated by the process `tor.exe`, located in the folder `c:\users\cyber\desktop\tor browser\browser\torbrowser\tor\tor.exe`.  There were a few other connections to sites over the Tor browser made around this timeframe.  
 
 **Query used to locate events:**
 
